@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Веб разработка phpner</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="yandex-verification" content="60dba7beb2ae9880" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
@@ -69,7 +68,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/media.css" />
     <script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/js/init.d.js"></script>
-    <script src="http://privedemklientov.ru/pk_form.js?token=774d9553be2c2aa1e8edaa840645fb52" type="text/javascript"></script>
+    <script src="js/pk_form.js" type="text/javascript"></script>
     <!--    <script>
       $(window).load(function() {
           $(".loader_inner").fadeOut();
@@ -100,14 +99,14 @@
         <a href="#4" class="main_menu_map main_menu__b__link">Контакты</a>
       </div>
       <a href="#" target="_blank" class="main_menu__b__link_atma">
-      phpner<br> в 2018 году
+      phpner <br> в 2018 году
       </a>
     </div>
     <div class="form_drop">
-      <form class="pk_form stop_click" style="text-align:center;">
+      <form action="https://formspree.io/phpner@gmail.com" class="pk_form stop_click" style="text-align:center;">
         <div class="form">
-          <div class="inp_wrap"><input type="text" name="" placeholder="Имя" data-pk_form_title="Имя" /></div>
-          <div class="inp_wrap"><input type="text" name="" class="phone" placeholder="Номер телефона" data-pk_form_title="Телефон" /></div>
+          <div class="inp_wrap"><input type="text" name="name" required  placeholder="Имя" data-pk_form_title="name" /></div>
+          <div class="inp_wrap"><input type="text" name="email" class="email" placeholder="Email адрес" data-pk_form_title="email" /></div>
           <input type="submit" class="btn_all btn_green" value="Заказать звонок" />
           <div style="text-align:left;color:#fff;font-size:11px;">Гарантируем что ваши данные не будут переданы 3-м лицам или использоваться в СПАМ рассылках.</div>
         </div>
@@ -384,7 +383,7 @@
       });
       $('.pk_form').pk_form({
           callback: function(){
-              $('.overlay').fadeIn(200);
+             $('.overlay').fadeIn(200);             
               $('body').click();
               $('.pk_form input[type="text"], .pk_form textarea').each(function(i, elem){
                   var _elem = $(elem);
@@ -393,12 +392,7 @@
                   };
                   _elem.find('.past_inp').remove();
                   _elem.val('');
-                  yaCounter29265245.reachGoal('ORDER');
-                  ga('send', 'event', 'knopka1', 'form1');
               });
-              location.href = $('#download_file').attr('href');
-            $('#download_file').click();
-            //yaCounter27838626.reachGoal('ORDER');
           }
       });
     </script>

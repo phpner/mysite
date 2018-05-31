@@ -420,14 +420,6 @@ function goSlide(active, state){
   setHash(y);
 };
 
-function onLinkClick(){
-  var url = $(this).attr('href');
-  $('.section__quarter_item_active .section__quarter_item__close').trigger('click');
-  setHash(url);
-  init(true);
-  closeMenu();
-  return false;
-};
 
 function moveSlide(t, state){
   var scale = state ? 1 : 0.5;
@@ -440,6 +432,15 @@ function moveSlide(t, state){
     '-o-transform': 'scale(' + scale + ')',
     'opacity': opacity
   });
+};
+
+function onLinkClick(){
+  var url = $(this).attr('href');
+  $('.section__quarter_item_active .section__quarter_item__close').trigger('click');
+  setHash(url);
+  init(true);
+  closeMenu();
+  return false;
 };
 
 function setHash(key){
