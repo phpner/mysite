@@ -294,6 +294,9 @@ z-index: 9999;
   width: 250px;
   transition: all .4s ease-in-out;
 }
+.animal_beef{
+  top: -15px;
+}
  #animal_beef,#html-5,#js,#css, .animal_img:hover svg{
   stroke-width: 5px;
   stroke: #fff; 
@@ -794,10 +797,9 @@ h2{
     background-size: auto 65%;
   }
   .work_scheme_img{
-   background-size: 80% 75%;
+  
        margin: auto;
        display: block;
-       width: 52%;
        height: 100%;
   }
   
