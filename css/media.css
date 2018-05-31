@@ -16,6 +16,8 @@
 	}
 	.work_scheme_img{
 		background-size: cover;
+		width: 66%;
+		margin: auto;
 	}
 	.main_name_site{
 		font-size: 4rem;
@@ -56,12 +58,22 @@
 		display: none;
 	}
 
+	.work_scheme_img + h1 {
+		top: 60px;
+		font-size: 33px;
+	}
+
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 		.main_name_site{
 		font-size: 1.7rem;
+	}
+
+	.animal_img svg{
+		height: 130px;
+		width: 130px;
 	}
 
 }
