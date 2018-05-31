@@ -6,10 +6,13 @@ html, body{
 }
 body{
   background-color: rgba(51, 52, 51, 0.7);
-  font-family: 'robotoregular';
+   font-family:'robotoregular', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
+  line-height: 1.5;
   font-size: 14px;
+  letter-spacing: .1rem;
   color: #000;
+
 }
 b{
   font-family: 'robotobold';

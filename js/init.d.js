@@ -470,13 +470,8 @@ function getMenuClassNameByNumber(number) {
   }
   if (number == 4)
   {
-    class_name = 'main_menu_price';
-  }
-  if (number == 5)
-  {
     class_name = 'main_menu_map';
   }
-
   return class_name;
 
 }
