@@ -5,7 +5,7 @@
     <title>Веб разработка phpner</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="yandex-verification" content="60dba7beb2ae9880" />
-     <meta name="viewport" content="width=992, initial-scale=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
         var myMap, myPlacemark;
@@ -141,6 +141,7 @@
     <div class="main_menu__t">
         <div class="close_btn_base menu_btn_all menu_close_btn" onclick="closeMenu();">Меню</div>
     </div>
+    
     <div class="main_menu__b">
         <a href="#0" class="main_menu_index main_menu__b__link">Главная</a>
         <a href="#1" class="main_menu_about main_menu__b__link">Обо мне</a>
@@ -173,8 +174,10 @@
             <div class="section__item section__left main_left">
                 <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div>
             
-                <div class="logo_left logo logo_img"></div>
-                <div class="main_name_site" style="text-align:right;">Александр&nbsp;</div>
+                <div class="flex">
+                    <div class="logo_left logo logo_img"></div>
+                    <div class="main_name_site title_left" style="text-align:right;">Александр&nbsp;</div>
+                </div>
             </div>
             <div class="section__item section__right main_right">
                 <div class="phone_wrap">
@@ -184,19 +187,19 @@
                     </div>
                     <div style="text-align:right;font-size:14px;padding-top:20px;font-family:'robotolight';font-weight:normal;">
                         <span id="pastemarkerend">                            
-                        </span>Современная Web разработка&nbsp;
+                        Современная Web разработка&nbsp;
+                        </span>
                     </div>
                 </div>
                 <div class="logo_right logo logo_img"></div>
-                <div class="main_name_site" style="text-align:left;">Иванович</div>
+                <div class="main_name_site title_right" style="text-align:left;">Иванович</div>
             </div>
         </div>
 
 <div class="section">
-    <div class="section__item about_img section__left">
-        <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div>              
-    </div>
-        <div class="section__item bg_white section__right section__item_before over">
+    <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div> 
+    <div class="section__item about_img section__left mob_right"></div>
+        <div class="section__item bg_white section__right mob_right section__item_before over">
                     <div class="section__item__content"> 
   <div class="text-in-about"> 
    <h1>Обо мне</h1> <br /><br /> 
@@ -396,7 +399,7 @@
             <div class="section__item bg_white section__right  mob_right">
                 <div class="work_scheme_img"></div>
                 
-                <h1>Как мы работаем</h1>
+                <h1>Как я работаю</h1>
             </div>
         </div>
 

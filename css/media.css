@@ -17,16 +17,52 @@
 	.work_scheme_img{
 		background-size: cover;
 	}
+	.main_name_site{
+		font-size: 4rem;
+	}
 
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.main_name_site{
+		font-size: 3rem;
+	}
+	.section__item .title_left, .section__item  .title_right{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	}
+	.section__item  .title_left{
+		right: 0;
+	}
+	.section__item  .title_right{
+		left: 0;
+	}
+	.logo_img{
+		display: none;
+	}
+	.phone_wrap{
+		display: inline-block;
+	    position: relative;
+	    top: 25%;
+	    white-space: nowrap;
+	    text-align: right;
+	    color: #90bf7d;
+	    left: 0;
+	    transform: translate(-50%, -50%);
+	}
+	.phone_wrap #pastemarkerend{
+		display: none;
+	}
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+		.main_name_site{
+		font-size: 1.7rem;
+	}
 
 }
 
