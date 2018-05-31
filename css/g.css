@@ -1,0 +1,68 @@
+*{box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+html, body{
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+body{
+  background-color: rgba(51, 52, 51, 0.7);
+  font-family: 'robotoregular';
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
+}
+b{
+  font-family: 'robotobold';
+  font-weight: normal;
+}
+.br5,.br20,.br10,.br15,.br30,.br35,.br40,.br80{
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+.br5{height: 5px;}
+.br20{height: 20px;}
+.br30{height: 30px;}
+.br80{height: 80px;}
+.br40{height: 40px;}
+.br35{height: 35px;}
+.br15{height: 15px;}
+.br10{height: 10px;}
+
+.fs_45,.fs_45 *{
+  font-size: 45px;
+  font-weight: normal;
+}
+.fs_20,.fs_20 *{
+  font-size: 20px;
+  font-weight: normal;
+}
+.fs_18,.fs_18 *{
+  font-size: 18px;
+  font-weight: normal;
+}
+.font_light,
+.font_light *{
+  font-family: 'robotolight';
+  font-weight: normal;
+}
+.ftext{
+  font-family: 'robotolight';
+  font-size: 15px;
+  padding: 0 70px;
+}
+.ftext p{
+  margin-bottom: 30px;
+}
+
+input[type="text"]{
+  padding: 11px;
+  font-size: 18px;
+  font-family: 'robotoregular';
+  outline: none;
+  border: 1px solid #E8E8E8;
+  border-radius: 2px;
+  width: 100%;
+  background-color: rgba(248, 248, 248, 0.8);
+}
