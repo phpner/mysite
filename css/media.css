@@ -116,6 +116,17 @@
 	.form_drop .error_message:before{
 		display: none;
 	}
+	.work_scheme_img{
+		display: none;
+	}
+
+	.mob_div{
+		display: flex;
+	}
+	.h1-top{
+		font-size: 41px;
+		top: 56px;
+	}
 
 }
 
@@ -136,7 +147,26 @@
 	.form{
 		width: 250px;	
 	}
+	.text-in-about{
+		padding: 0 67px;
+	}
+	.section__right{
+		padding: 0;
+	}
+	.mob_div{
+		font-size: 10px;
+	}
+	.h1-top{
+		font-size: 41px;
+		top: 56px;
+	}
 
+}
+
+@media only screen and (max-height: 500px){
+.work_scheme_img{
+	width: 40%;
+}
 }
 
 /* Custom, iPhone Retina */

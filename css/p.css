@@ -101,6 +101,35 @@ width: 16px;
     height: 100%;
     background-repeat: no-repeat;
   }
+  .how_work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* flex-flow: column; */
+    margin-top: 40px;
+  }
+  .how_work .svg{
+  width: 45px;
+  height: 48px;
+  background-size: cover;
+  background-position: center center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 14px;
+}
+  .mob_div{
+    display: none;
+    flex-flow: column;
+    background: #00000069;
+    color: #fff;
+    border-radius: 25px;
+    padding: 12px;
+  }
+  .w{
+       padding: 9px 15px;
+  }
+
 .section__item:first-child{left: 1px;}
 .section__item:last-child{right: 0px;}
 .section__item_map{
