@@ -596,19 +596,19 @@ h2{
   z-index: 2000;
   text-align: center;
 }
-.overlay:before{
-  content: "";
-  display: inline-block;
-  width: 0px;
-  height: 100%;
-  vertical-align: middle;
-}
 .overlay__box{
   display: inline-block;
   vertical-align: middle;
   min-width: 400px;
   max-width: 650px;
   color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 30%;
 }
 
 .section__item_map__inf_wrap{
@@ -662,7 +662,7 @@ h2{
 .form{
   display: inline-block;
   vertical-align: middle;
-  width: 325px;
+  width: 300px;
 }
 
 .btn_all{
@@ -706,7 +706,7 @@ h2{
 .phone_wrap{
   display: inline-block;
   position: absolute;
-  top:40px;
+  top: 54px;
   right: 0%;
   white-space: nowrap;
   text-align: right;

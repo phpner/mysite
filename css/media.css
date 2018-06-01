@@ -31,6 +31,23 @@
 		height: 150px;
 		width: 150px;
 	}
+	.phone_wrap #pastemarkerend{
+		display: none;
+	}
+		.menu_btn_all span{
+		display: none;
+	}
+	.menu_btn{
+		width: 60px;
+		height: 60px;
+		top: 54px;
+		background-position: center center;
+		border: 2px solid;
+		left: 9px;
+	}
+	.text-in-about{
+		padding: 0 95px;
+	}
 
 }
 
@@ -91,6 +108,15 @@
 		width: 100px;
 	}
 
+	.form_drop .error_message{
+		position: initial;
+		margin-bottom: 10px;	
+
+	}
+	.form_drop .error_message:before{
+		display: none;
+	}
+
 }
 
 /* Extra Small Devices, Phones */
@@ -105,6 +131,10 @@
 		background-position: center center;
 		border: 2px solid;
 		left: 9px;
+	}
+
+	.form{
+		width: 250px;	
 	}
 
 }

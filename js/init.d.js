@@ -534,6 +534,14 @@ function init(clear){
   stopClick = $('.stop_click');
   menuLink = $('.main_menu__b__link, .links');
   quarterItem = $('.section__quarter_item');
+
+  var h = window.location.hash.replace(/\#/g, '')
+
+if (h == 'thanks'){
+  $(".overlay").fadeIn(200);
+  window.location.hash = 0;
+}
+
   hash = parseInt(window.location.hash.replace(/\#/g, '') == '' ? 0 : window.location.hash.replace(/\#/g, ''));
 
   y = num = hash > sectionLeng || hash < 0 ? 0 : hash;
