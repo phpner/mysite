@@ -68,7 +68,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/media.css" />
     <script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/js/init.d.js"></script>
-    <script src="js/pk_form.js" type="text/javascript"></script>
+    <script src="js/jquery.validate.js" type="text/javascript"></script>
     <!--    <script>
       $(window).load(function() {
           $(".loader_inner").fadeOut();
@@ -80,7 +80,6 @@
     <!-- <div class="loader">
       <div class="loader_inner"></div>
       </div> -->
-    <a href="/u/price-list/price_list.xlsx" target="_blank" style="display:none;" id="download_file"></a>
     <div class="overlay" onclick="$('.overlay').fadeOut(200);">
       <div class="overlay__box">
         <div style="font-size:50px;font-family:'robotoblack';">Спасибо!</div>
@@ -99,16 +98,24 @@
         <a href="#4" class="main_menu_map main_menu__b__link">Контакты</a>
       </div>
       <a href="#" target="_blank" class="main_menu__b__link_atma">
-      phpner <br> в 2018 году
+      phpner 
+      <br> <br />
+      в 2018 году
       </a>
     </div>
     <div class="form_drop">
-      <form action="https://formspree.io/phpner@gmail.com" class="pk_form stop_click" style="text-align:center;">
+      <form  action="https://formspree.io/phpner@gmail.com" class="pk_form stop_click" method="POST" style="text-align:center;">
         <div class="form">
-          <div class="inp_wrap"><input type="text" name="name" required  placeholder="Имя" data-pk_form_title="name" /></div>
-          <div class="inp_wrap"><input type="text" name="email" class="email" placeholder="Email адрес" data-pk_form_title="email" /></div>
+          <div class="inp_wrap">
+            <input type="text" name="name"   placeholder="Имя" />
+         </div>
+          <div class="inp_wrap">
+            <input type="text" name="email" class="email" placeholder="Email адрес"  />
+        </div>
           <input type="submit" class="btn_all btn_green" value="Заказать звонок" />
-          <div style="text-align:left;color:#fff;font-size:11px;">Гарантируем что ваши данные не будут переданы 3-м лицам или использоваться в СПАМ рассылках.</div>
+          <div style="text-align:left;color:#fff;font-size:11px;">Гарантирую что ваши данные не будут переданы 3-м лицам или использоваться в СПАМ рассылках.</div>
+          <input type="hidden" name="_next" value="http://phpner.h1n.ru/#thanks" />
+          <input type="hidden" name="_language" value="ru" />
         </div>
       </form>
     </div>
@@ -116,7 +123,7 @@
       <div class="body_wrap__wrap">
         <div class="section one_section">
           <div class="section__item section__left main_left">
-            <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div>
+            <div class="menu_btn menu_btn_all stop_click main_btn_base_white"><span>Меню</span></div>
             <div class="flex">
               <div class="logo_left logo logo_img"></div>
               <div class="main_name_site title_left" style="text-align:right;">Александр&nbsp;</div>
@@ -125,7 +132,7 @@
           <div class="section__item section__right main_right">
             <div class="phone_wrap">
               <div>
-                <a href="#" class="phone_wrap__link stop_click" onclick="$('body').addClass('main_form_active');return false;">Закажите звонок</a>
+                <a href="#" class="phone_wrap__link stop_click" onclick="$('body').addClass('main_form_active');return false;">Написать мне</a>
               </div>
               <div style="text-align:right;font-size:14px;padding-top:20px;font-family:'robotolight';font-weight:normal;">
                 <span id="pastemarkerend">                            
@@ -138,7 +145,7 @@
           </div>
         </div>
         <div class="section">
-          <div class="menu_btn menu_btn_all stop_click main_btn_base_green">Меню</div>
+          <div class="menu_btn menu_btn_all stop_click main_btn_base_green"><span>Меню</span></div>
           <div class="section__item about_img section__left mob_left"></div>
           <div class="section__item bg_white section__right mob_right section__item_before over">
             <div class="section__item__content">
@@ -172,7 +179,7 @@
         </div>
         <div class="section">
           <div class="section__item section__left">
-            <div class="menu_btn menu_btn_all stop_click main_btn_base_green">Меню</div>
+            <div class="menu_btn menu_btn_all stop_click main_btn_base_green"><span>Меню</span></div>
             <div class="section__quarter_item quarter_tl" id="animal_beef">
               <div class="animal_img">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -205,7 +212,7 @@
                 <!-- <span class="animal_img__name">text</span> -->
               </div>
               <div class="section__quarter_item__content">
-                <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div>
+                <div class="menu_btn menu_btn_all stop_click main_btn_base_white"><span>Меню</span></div>
                 <div class="section__quarter_item__close close_btn_all"></div>
                 <div class="text-in">
                   <h2>PHP</h2>
@@ -232,7 +239,7 @@
                 </svg>
               </div>
               <div class="section__quarter_item__content ">
-                <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div>
+                <div class="menu_btn menu_btn_all stop_click main_btn_base_white"><span>Меню</span></div>
                 <div class="section__quarter_item__close close_btn_all"></div>
                 <div class="text-in">
                   <h2>HTML5</h2>
@@ -267,7 +274,7 @@
                 </svg>
               </div>
               <div class="section__quarter_item__content">
-                <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div>
+                <div class="menu_btn menu_btn_all stop_click main_btn_base_white"><span>Меню</span></div>
                 <div class="section__quarter_item__close close_btn_all"></div>
                 <div class="text-in">
                   <h2>JavaScript</h2>
@@ -310,7 +317,7 @@
                 </svg>
               </div>
               <div class="section__quarter_item__content">
-                <div class="menu_btn menu_btn_all stop_click main_btn_base_white">Меню</div>
+                <div class="menu_btn menu_btn_all stop_click main_btn_base_white"><span>Меню</span></div>
                 <div class="section__quarter_item__close close_btn_all"></div>
                 <div class="text-in">
                   <h2>Преимущества CSS</h2>
@@ -324,7 +331,7 @@
           </div>
         </div>
         <div class="section">
-          <div class="menu_btn menu_btn_all stop_click main_btn_base_green">Меню</div>
+          <div class="menu_btn menu_btn_all stop_click main_btn_base_green"><span>Меню</span></div>
           <div class="section__item work_img section__left mob_left"></div>
           <div class="section__item bg_white section__right  mob_right">
             <div class="work_scheme_img"></div>
@@ -333,7 +340,7 @@
         </div>
         <div class="section">
           <div class="section__item section__item_map" id="map">
-            <div class="menu_btn menu_btn_all stop_click main_btn_base_green">Меню</div>
+            <div class="menu_btn menu_btn_all stop_click main_btn_base_green"><span>Меню</span></div>
             <div class="section__item_map__inf_wrap">
               <div>
                 <b class="section__item_map__inf_box__h"  style=" color: #4f4f4f;">Как меня найти</b>
@@ -381,8 +388,26 @@
       
           $('.phone').mask('+7 (999) 999-9999');
       });
-      $('.pk_form').pk_form({
-          callback: function(){
+      $('.pk_form').validate({
+                rules : {
+                   name:{required: true},
+                   email: {
+                     required: true,
+                     email: true
+                   }
+                },
+                messages : {
+                    name : "Имя обязательно!",
+                    email : "Email обязательно!"
+                },
+                errorClass: "error_message",
+                errorElement : "div",
+                highlight: function () { }
+      });
+    </script>
+
+
+       callback: function(){
              $('.overlay').fadeIn(200);             
               $('body').click();
               $('.pk_form input[type="text"], .pk_form textarea').each(function(i, elem){
@@ -394,8 +419,6 @@
                   _elem.val('');
               });
           }
-      });
-    </script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">

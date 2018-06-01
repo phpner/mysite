@@ -2,6 +2,10 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+	.animal_img svg{
+		height: 200px;
+		width: 200px;
+	}
 
 }
 
@@ -21,6 +25,11 @@
 	}
 	.main_name_site{
 		font-size: 4rem;
+	}
+
+	.animal_img svg{
+		height: 150px;
+		width: 150px;
 	}
 
 }
@@ -45,14 +54,16 @@
 		display: none;
 	}
 	.phone_wrap{
-		display: inline-block;
-	    position: relative;
-	    top: 25%;
+		top: 39%;
+	    right: 100%;
+	    width: 133px;
+    	height: 34px;
 	    white-space: nowrap;
 	    text-align: right;
 	    color: #90bf7d;
-	    left: 0;
-	    transform: translate(-50%, -50%);
+	    transform: translate(50%, -50%);
+	    margin: 0;
+
 	}
 	.phone_wrap #pastemarkerend{
 		display: none;
@@ -63,17 +74,37 @@
 		font-size: 33px;
 	}
 
+	.menu_btn_all span{
+		display: none;
+	}
+	.menu_btn{
+		width: 60px;
+		height: 60px;
+		top: 20px;
+		background-position: center center;
+		border: 2px solid;
+		left: 9px;
+	}
+
+	.animal_img svg{
+		height: 100px;
+		width: 100px;
+	}
+
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-		.main_name_site{
+	.main_name_site{
 		font-size: 1.7rem;
 	}
 
-	.animal_img svg{
-		height: 130px;
-		width: 130px;
+	.menu_btn{
+		width: 40px;
+		height: 40px;
+		background-position: center center;
+		border: 2px solid;
+		left: 9px;
 	}
 
 }

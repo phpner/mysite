@@ -165,6 +165,7 @@ width: 16px;
   background-color: #779f1f;
   z-index: 1000;
   transition: left 400ms;
+  overflow: auto;
 }
 .main_menu_active .main_menu{
   left: 0px !important;
@@ -306,7 +307,6 @@ width: 16px;
   font-size: 30px;
   margin: 0px;
   cursor: pointer;
-  padding-top: 244px;
 }
 
 .animal_img svg{
@@ -730,7 +730,7 @@ h2{
   font-size: 12px;
   border-radius: 5px;
   padding: 7px 15px;
-  margin-right: 38px;
+  margin-right: 64px;
   background: #9ecc2a
 }
 .phone_wrap__link:hover{
@@ -977,7 +977,7 @@ h2{
  */
 .main_menu__b__link_atma {
   display: inline-block;
-  position: absolute;
+  text-align: center;
   bottom: 20px;
   left: 0px;
   background-image: url();
