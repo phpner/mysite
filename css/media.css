@@ -169,6 +169,23 @@
 }
 }
 
+
+@media only screen and (max-height: 330px){
+.work_scheme_img{
+	width: 40%;
+}
+	.how_work {
+	    display: flex;
+	    /* justify-content: center; */
+	    align-items: center;
+	     flex-flow: row; 
+	    margin-top: 0px;
+	}
+	.mob_div{
+		 flex-flow: row; 
+	}
+}
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 

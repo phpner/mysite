@@ -59,7 +59,8 @@ b{
   margin-bottom: 30px;
 }
 
-input[type="text"]{
+input[type="text"],
+textarea{
   padding: 11px;
   font-size: 18px;
   font-family: 'robotoregular';
