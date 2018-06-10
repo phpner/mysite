@@ -471,6 +471,10 @@ function getMenuClassNameByNumber(number) {
   }
   if (number == 4)
   {
+    class_name = 'main_menu_my-work';
+  }
+  if (number == 5)
+  {
     class_name = 'main_menu_map';
   }
   return class_name;
@@ -534,6 +538,7 @@ function init(clear){
   stopClick = $('.stop_click');
   menuLink = $('.main_menu__b__link, .links');
   quarterItem = $('.section__quarter_item');
+
 
   var h = window.location.hash.replace(/\#/g, '')
 
@@ -610,7 +615,7 @@ $(document).ready(function(e) {
       return false;
     }
     _this.css({
-      'width': '100%',
+      'width': '50%',
       'height': '50%'
     });
     _this.addClass('section__quarter_item_animate');
