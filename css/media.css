@@ -54,7 +54,7 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	.main_name_site{
-		font-size: 3rem;
+		font-size: 2.2rem;
 	}
 	.section__item .title_left, .section__item  .title_right{
 	position: absolute;
@@ -166,6 +166,7 @@
 @media only screen and (max-height: 500px){
 .work_scheme_img{
 	width: 40%;
+  margin: auto;
 }
 }
 

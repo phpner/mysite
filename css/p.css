@@ -326,6 +326,7 @@ width: 16px;
   -moz-transition: all 600ms ease-in;
   -ms-transition: all 600ms ease-in;
   -o-transition: all 600ms ease-in;
+  background: rgba(10, 10, 10, 0.50);
 }
 
 
@@ -403,6 +404,7 @@ width: 16px;
   position: relative;
   right: 15px;
   padding: 12px 20px;
+  margin: 5px 0;
   color: #fff;
   text-decoration: none;
   font-family: 'robotolight';
