@@ -162,6 +162,11 @@
             </div>
             <div class="logo_right logo logo_img"></div>
             <div class="main_name_site title_right" style="text-align:left;">Иванович</div>
+
+            <section id="section03" class="Scroll">
+              <a href="#1"><span></span>Scroll</a>
+            </section>
+
           </div>
         </div>
         <div class="section">
@@ -517,6 +522,11 @@
                   },
               }
           });
+
+          /*click button to scroll*/
+          $("#section03 a").on('click',function(){
+              mouseWheel({deltaY : 100});
+          })
       });
 
     </script>
