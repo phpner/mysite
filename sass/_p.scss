@@ -45,6 +45,7 @@ img, embed, object, video {
   border-radius: 100%;
   box-sizing: border-box;
 }
+#section03 a #pushName{display: none}
 #section03 a span::after {
   position: absolute;
   top: 50%;
@@ -414,7 +415,6 @@ width: 16px;
   font-size: 18px;
   background: #ffffff61;
   padding: 15px;
-  border-radius: 25px;
   letter-spacing: 1.2px; 
 }
 .section__quarter_item_active .section__quarter_item__content{
@@ -430,6 +430,7 @@ width: 16px;
 .section__quarter_item_active .animal_img{
   display: none;
 }
+
 
 .transition_600ms{
   transition: all 600ms ease-in;
@@ -1176,14 +1177,152 @@ h2{
   text-shadow: 4px 2px 3px black;
   color: #8db43d;
 }
-.my_work_section .item{
-  position: relative;
-  padding: 15px;
-}
-.my_work_section .item:before{
+.my_work_section__box{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
 
 }
-.my_work_section .item img{
-  border-radius: 25px;
+.my_work_section__box .item, .mfp-content .item{
+  position: relative;
+  margin:0 15px;
+  width: 250px;
+  height: 250px;
+}
+
+.my_work_section__box .item .text__in, .mfp-content .item .text__in{
+  position: absolute;
+  left:  0;
+  right: 0;
+  top: 0;
+  bottom: 0; 
+  margin: auto;
+  transition: all .8s ease-out;
+
+}
+.my_work_section__box .item .text__in::before,.mfp-content .item .text__in::before,
+.my_work_section__box .item .text__in::after,.mfp-content .item .text__in::after{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity .4s, transform .5s ease-in;
+}
+
+.my_work_section__box .item .text__in::before,.mfp-content .item .text__in::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.my_work_section__box .item .text__in::after, .mfp-content .item .text__in::after{
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  box-sizing: border-box;
+
+}
+.my_work_section__box .item a:hover .text__in::before,.mfp-content .item a:hover .text__in::before,
+.my_work_section__box .item a:hover .text__in::after, .mfp-content .item a:hover .text__in::after, {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.my_work_section__box .item  a:hover .text__in, .mfp-content  .item  a:hover .text__in{
+   background: rgba(21, 20, 20, .7);   
+}
+.my_work_section__box .item p,.mfp-content  .item p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: #fff;
+  background: rgba(97, 91, 85, 0.82);
+  font-size: 1.7rem;
+  border: 2px solid rgba(97, 91, 85, 1);
+  padding: 3px;
+  border-radius: 6px;
+  transition: all .9s;
+  }
+  .my_work_section__box .item a:hover p, .mfp-content  .item a:hover p{
+    border-color: #fff;
+     background: initial;   
+  }
+
+.my_work_section__box .item img{
   box-shadow: 3px 8px 14px 0px #161617;
+  width: inherit;
+  height: inherit;
+}
+#show-more{
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+#show-more a{
+  text-decoration: none;
+  position: relative;
+  background: #615b55;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 9px;
+  color: #fff;
+  box-shadow: 0 0 3px #fff;
+  overflow: hidden;
+  outline: none;
+  transition: box-shadow .5s; 
+  border: 2px inset transparent;
+}
+#show-more a:hover{
+  box-shadow: 0px 0px 29px #fff;
+  border: 2px inset rgba(255, 255, 255, 0.4);
+}
+
+#show-more a:after,#show-more a:before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.41);
+  display: block; 
+  top: 0;
+  transition: all .5s;
+  opacity: .2;
+}
+#show-more a:after,#show-more a:before{
+      left: -64px;
+     transform: rotate(-46deg);
+
+}
+#show-more a:before{
+   transition: all .7s;
+   background: rgba(255, 255, 255, 0.2);
+}
+#show-more a:hover:after,#show-more a:hover:before{
+  left: 100%;
+  top: 40px;
+  opacity: 1;
+}
+
+.mfp-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ 
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  display: table;
+}
+.mfp-content .item{
+  width: 250px;
+  display: inline-block;
+  margin: 10px;
 }

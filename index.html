@@ -13,96 +13,23 @@
     <meta property="og:image" content="http://phpner.h1n.ru/i/screen.png" />
     <meta property="og:image:width" content="968">
     <meta property="og:image:height" content="504">
+
     <meta property="og:site_name" content="фрилансер phpner - веб разработка " />
-
-
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>
-
-    <script >
-      var myMap, myPlacemark;
-      
-      ymaps.ready(init);
-      
-      function init(){
-      
-          myMap = new ymaps.Map("map", {
-              center: [48.5759,39.3138],
-              zoom: 12,
-              controls: ["zoomControl"]
-          });
-      
-          $('.section__item_map__inf_box__preview:first').trigger('click');
-      
-          myMap.behaviors.disable('scrollZoom');
-      }
-      
-      function map_pin_changer__by_branch(_this) {
-          var geo = [];
-      
-      
-          myMap.geoObjects.removeAll();
-     
-      
-              var placemark =  new ymaps.Placemark([48.5739,39.3077], {}, {
-                  iconLayout: 'default#image',
-                  iconImageHref: '/i/marker.png',
-                  iconImageSize: [46, 75],
-                  iconImageOffset: [-46, -75]
-              });
-      
-      
-              myMap.geoObjects.add(placemark);
-      
-              geo.push([48.5739,39.3077]);
-          
-          if(geo.length > 1)
-          {
-              myMap.setBounds(geo, {
-                  duration: 1200,
-                  zoomMargin: [200, 0]
-              });
-          }
-          else
-          {
-              myMap.panTo(geo, {
-                  flying: 1,
-                  duration: 1200
-              });
-          }
-      
-      }
-      
-    </script>
     <link rel="stylesheet"  media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
-    <link rel="stylesheet"  media="screen" href="/css/owl.carousel.css" />
-    <link rel="stylesheet"  media="screen" href="/css/owl.theme.default.css" />
-    <link rel="stylesheet"  media="screen" href="/css/fonts.css" />
-    <link rel="stylesheet"  media="screen" href="/css/g.css" />
-    <link rel="stylesheet"  media="screen" href="/css/p.css" />
-    <link rel="stylesheet"  media="screen" href="/css/svg.css" />
-    <link rel="stylesheet"  media="screen" href="/css/bg_img.css" />
-    <link rel="stylesheet"  media="screen" href="/css/media.css" />
-    <script  src="/js/jquery-2.0.3.min.js"></script>
-    <script  src="/js/init.d.js"></script>
-    <script src="js/jquery.validate.js" ></script>
-       <script>
-       /* $(window).load(function() {
-            $(".loader_inner").fadeOut();
-            $(".loader").delay(400).fadeOut("slow");
-        });*/
-      </script> 
+    <link rel="stylesheet"  media="screen" href="/css/main.css" />
+
   </head>
   <body onclick="closeMenu();" data-lang="ru">
-   <!--
-    <div class="loader">
-        <div class="loader_inner"></div>
-    </div> 
+
+ <!--    <div class="loader">
+     <div class="loader_inner"></div>
+ </div>  -->
     <div class="overlay" onclick="$('.overlay').fadeOut(200);">
       <div class="overlay__box">
         <div style="font-size:50px;font-family:'robotoblack';">Спасибо!</div>
-        <div style="font-size:28px;">Я обязательно Вам отвечу&nbsp;в ближайшее время !</div>
+        <div style="font-size:28px;">Заявка успешно отправлена Наш оператор свяжется с Вами в течение 10-15 минут для подтверждения заказа !</div>
       </div>
-    </div> -->
+    </div>
     <div class="main_menu stop_click">
       <div class="main_menu__t">
         <div class="close_btn_base menu_btn_all menu_close_btn" onclick="closeMenu();">Меню</div>
@@ -164,7 +91,11 @@
             <div class="main_name_site title_right" style="text-align:left;">Иванович</div>
 
             <section id="section03" class="Scroll">
-              <a href="#1"><span></span>Scroll</a>
+              <a href="#1">
+                <span></span>
+                <p id="scrollName">Scroll</p>
+                <p id="pushName">Нажми</p>
+              </a>
             </section>
 
           </div>
@@ -241,7 +172,6 @@
                 <div class="section__quarter_item__close close_btn_all"></div>
                 <div class="text-in">
                   <h2>PHP</h2>
-                  Популярность PHP
                   О популярности PHP говорит тот факт, что он используется на 83,1% среди всех сайтов, на которых удалось определить язык программирования серверной части.
                   Все самые популярные CMS, которые занимают первые места в рейтингах популярности (как платные, так и бесплатные: WordPress, Joomla, Drupal, Modx, Bitrix. Magento и др.) — написаны на языке программирования PHP.
                   Также о популярности языка программирования PHP свидетельствует множество созданных PHP-фреймворков, таких как Laravel, Yii, CakePHP, Slim, Zend Framework 2, PHPixie, CodeIgniter, Symfony 2 и другие. Существует огромное количество форумов и крупных сообществ — в целом по PHP, по каждому фреймворку и по каждой CMS в отдельности.
@@ -384,34 +314,62 @@
           <div class="section__item section__right bg_width_100 bg_my-works">
             <div class="my_work_section popup-gallery ">
               <h2>Верстка из PSD</h2>
-              <div class="owl-carousel owl-theme">
+              <div class="my_work_section__box">
                 <div class="item">
-                  <a href="img/1-full.png"><img src="img/1.jpg" alt=""></a>
+                  <a class="gal"  href="img/1-full.png">
+                  	<img src="img/1.jpg" alt="">
+                  	<span class="text__in">
+                  		<p>Верстка</p>
+                  	</span>
+                  </a>
                 </div>
                 <div class="item">
-                  <a href="img/2-full.png">
+                  <a class="gal" href="img/2-full.png">
                     <img src="img/2.jpg" alt="">
+	                    <span class="text__in">
+	                    	<p>Верстка</p>
+	                    </span>
                   </a>
                 </div>
                 <div class="item">
-                  <a href="img/3-full.png">
+                  <a class="gal"  href="img/3-full.png">
                     <img src="img/3.jpg" alt="">
+                    <span class="text__in">
+                    	<p>Верстка</p>
+                    </span>
                   </a>
                 </div>
-                <div class="item">
-                  <a href="img/4-full.png">
-                    <img src="img/4.jpg" alt="">
-                  </a>
+                <br>
+                <div id="show-more" >
+                	<a class="show-more" href="#load-more">Загрузить больше</a>
                 </div>
-                <div class="item">
-                  <a href="img/5-full.png">
-                    <img src="img/5.jpg" alt="">
-                  </a>
+                <div id="load-more" class="my_work_section__box__load" style="display: none;">
+                <div class="popup-gallery-hidden">
+                  <div class="item">
+                    <a class="gal-1" href="img/4-full.png">
+                      <img src="img/4.jpg" alt="">
+                      <span class="text__in">
+                      	<p>Верстка</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="gal-1"   href="img/5-full.png">
+                      <img src="img/5.jpg" alt="">
+                      <span class="text__in">
+                      	<p>Верстка</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="gal-1" href="img/6-full.png">
+                      <img src="img/6.jpg" alt="">
+                      <span class="text__in">
+                      	<p>Верстка</p>
+                      </span>
+                    </a>
+                  </div>
                 </div>
-                <div class="item">
-                  <a href="img/6-full.png">
-                    <img src="img/6.jpg" alt="">
-                  </a>
                 </div>
               </div>
             </div>
@@ -425,7 +383,7 @@
                 <b class="section__item_map__inf_box__h"  style=" color: #4f4f4f;">Как меня найти</b>
               </div>
               <div class="section__item_map__inf_box section__item_map__inf_box__active">
-                <div class="section__item_map__inf_box__preview" onclick="map_pin_changer__by_branch($(this)); map_box_set_active($(this))" style="display:none">
+                <div class="section__item_map__inf_box__preview"  style="display:none">
                   <table   class="section__item_map__inf_box__table">
                     <tr>
                       <td><b class="preview_name">В Лугансе</b></td>
@@ -438,7 +396,7 @@
                   <table  class="section__item_map__inf_box__table">
                     <tr>
                       <td >
-                        <b class="branch_name branch_name_active txt_color_green_light" onclick="map_pin_changer__by_branch();">В Лугансе</b>
+                        <b class="branch_name branch_name_active txt_color_green_light" >В Лугансе</b>
                       </td>
                     </tr>
                     <tr>
@@ -467,12 +425,41 @@
         </div>
       </div>
     </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+   <script  src="/js/jquery-2.0.3.min.js"></script>
+   <script src="js/jquery.validate.min.js" ></script>
+   <script src="js/jquery.magnific-popup.min.js"></script>
    <script src="js/owl.carousel.min.js"></script>
+   <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>
+   <script  src="/js/init.d.js"></script>
     <script >
       $(function () {
+
+
+		$(".show-more").on('click',function(event){
+      quarterItemDrop = true;
+			event.preventDefault();
+			$.magnificPopup.open({				     
+				     items: {
+				          src: $("#load-more").html(),
+				          type: 'inline'
+				      },
+                callbacks: {                 
+                  close: function() {
+                   quarterItemDrop = false;
+                  }
+                 
+                }              
+				});
+    
+			});
+
+		$(document).on('click', '.popup-modal-dismiss', function (e) {
+				e.preventDefault();
+				$.magnificPopup.close();
+			});
+
           $('.popup-gallery').magnificPopup({
-              delegate: 'a',
+              delegate: '.gal',
               type: 'image',
               tLoading: 'Loading image #%curr%...',
               mainClass: 'mfp-img-mobile',
@@ -484,9 +471,17 @@
               image: {
                   tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
                   titleSrc: function(item) {
-                      return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                      return item.el.attr('title') + '<small>by phpner</small>';
                   }
-              }
+              },
+              callbacks: {
+                 open: function() {
+                  quarterItemDrop = true;
+                 },
+                 close: function() {
+                   quarterItemDrop = false;
+                 }
+               }
           });
 
           $('.pk_form').validate({
@@ -503,6 +498,9 @@
               },
               errorClass: "error_message",
               errorElement : "div",
+              highlight: function (element, errorClass, validClass) {
+                  return false;  // ensure this function stops
+              }
           });
           $('.owl-carousel').owlCarousel({
               loop:true,
@@ -527,8 +525,45 @@
           $("#section03 a").on('click',function(){
               mouseWheel({deltaY : 100});
           })
+
+
+          var myMap, myPlacemark;
+
+          ymaps.ready(init);
+
+          function init(){
+
+              myMap = new ymaps.Map("map", {
+                  center: [48.5759,39.3138],
+                  zoom: 12,
+                  controls: ["zoomControl"]
+              });
+
+              $('.section__item_map__inf_box__preview:first').trigger('click');
+
+              myMap.behaviors.disable('scrollZoom');
+              var geo = [];
+
+              myMap.geoObjects.removeAll();
+
+
+              var placemark =  new ymaps.Placemark([48.5739,39.3077], {}, {
+                  iconLayout: 'default#image',
+                  iconImageHref: '/i/marker.png',
+                  iconImageSize: [46, 75],
+                  iconImageOffset: [-46, -75]
+              });
+
+              myMap.geoObjects.add(placemark);
+
+              geo.push([48.5739,39.3077]);
+          }
       });
 
+      $(window).load(function() {
+          $(".loader_inner").fadeOut();
+          $(".loader").delay(400).fadeOut("slow");
+      });
     </script>
   </body>
 </html>

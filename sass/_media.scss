@@ -11,6 +11,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	#section03 a #scrollName{display: none}
+	#section03 a #pushName{display: block}
 	.mob_left{
 		display: none;
 	}
