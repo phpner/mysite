@@ -275,21 +275,26 @@ width: 16px;
 .menu_btn_all{
   display: inline-block;
   position: relative;
-  padding-left: 42px;
+  padding-left: 50px;
   background-repeat: no-repeat;
-  background-position: left center;
-  opacity: 0.8;
+  background-position: 15px center;
+  opacity: 1;
   cursor: pointer;
 }
 .menu_btn{
   position: absolute;
-  top: 40px;
+  top: 54px;
   left: 40px;
   color: #fff;
-  opacity: 0.8;
-  font-size: 25px;
+  opacity: 1;
+  font-size: 20px;
   cursor: pointer;
   z-index: 2;
+  background-color: #9ecc2a;
+  border: 1px solid #fff;
+  padding: 4px 27px 4px 55px;
+  border-radius: 5px;
+
 }
 .menu_btn_all:hover{
   opacity: 1;
@@ -873,11 +878,13 @@ h2{
   text-decoration: none;
   color: #ffffff;
   border: 1px solid #fff;
-  font-size: 12px;
+  font-size: 20px;
   border-radius: 5px;
-  padding: 7px 15px;
-  margin-right: 64px;
-  background: #9ecc2a
+     padding: 4px 21px;
+    margin: auto;
+    background: #9ecc2a;
+    display: block;
+    text-align: center;
 }
 .phone_wrap__link:hover{
   background-color: #fff;
@@ -1176,6 +1183,7 @@ h2{
 .my_work_section h2{
   text-shadow: 4px 2px 3px black;
   color: #8db43d;
+  margin-bottom: 60px;
 }
 .my_work_section__box{
   display: flex;
@@ -1250,7 +1258,7 @@ h2{
   border-radius: 6px;
   transition: all .9s;
   }
-  .my_work_section__box .item a:hover p, .mfp-content  .item a:hover p{
+.my_work_section__box .item a:hover p, .mfp-content  .item a:hover p{
     border-color: #fff;
      background: initial;   
   }
@@ -1278,6 +1286,7 @@ h2{
   outline: none;
   transition: box-shadow .5s; 
   border: 2px inset transparent;
+  font-size: 24px;
 }
 #show-more a:hover{
   box-shadow: 0px 0px 29px #fff;

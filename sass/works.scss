@@ -1,0 +1,186 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+.my_work_section{
+  height: 100%;
+  background: url("/img/bg_my_works.jpg") 0 0 no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+}
+.my_work_section_center{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 970px;
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  &:after{
+    content: "";
+    flex: auto;
+
+  }
+
+}
+.my_work_section_center h2{
+  flex: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 2rem;
+  color: #fff;
+  font-family: inherit;
+  background: #ccc2c259;
+  box-shadow: 0px 8px 5px -3px white;
+}
+.my_work_section_center .item{
+  position: relative;
+  margin: 0 15px;
+  width: 30%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-left: 17px;
+  box-shadow: 4px 5px 14px 0px rgba(92, 93, 145, 0.68);
+}
+
+.my_work_section_center  .item .text__in{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all .8s ease-out;
+}
+
+
+.my_work_section_center  .item .text__in::before,.mfp-content .item .text__in::before,
+.my_work_section_center  .item .text__in::after,.mfp-content .item .text__in::after{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity .4s, transform .5s ease-in;
+}
+
+.my_work_section_center  .item .text__in::before,.mfp-content .item .text__in::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.my_work_section_center  .item .text__in::after, .mfp-content .item .text__in::after{
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  box-sizing: border-box;
+
+}
+.my_work_section_center  .item a:hover .text__in::before,.mfp-content .item a:hover .text__in::before,
+.my_work_section_center  .item a:hover .text__in::after, .mfp-content .item a:hover .text__in::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.my_work_section_center  .item  a:hover .text__in, .mfp-content  .item  a:hover .text__in{
+  background: rgba(21, 20, 20, .7);
+}
+.my_work_section_center  .item p,.mfp-content  .item p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(97, 91, 85, 0.82);
+  font-size: 1.7rem;
+  border: 2px solid rgba(97, 91, 85, 1);
+  padding: 3px;
+  border-radius: 6px;
+  transition: all .9s;
+}
+.my_work_section_center  .item a:hover p, .mfp-content  .item a:hover p{
+  border-color: #fff;
+  background: initial;
+}
+.my_work_section .back{
+  position: relative;
+}
+.my_work_section .back a{
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  background: #b1c3c3;
+  padding: 11px 30px;
+  color: #fff;
+  font-family: Roboto sans-serif;
+  text-decoration: none;
+}
+
+.more-and-more{
+      color: #fff;
+    font-size: 30px;
+    padding: 40px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+@media only screen and (max-width : 992px) {
+  .my_work_section_center{
+    width: 768px;
+  }
+  .my_work_section_center .item{
+    width: 29%;
+    height: 200px;
+    margin-left: 18px;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .my_work_section_center{
+    width: 480px;
+  }
+  .my_work_section_center .item{
+    width: 27%;
+    height: 125px;
+    margin-left: 15px;
+  }
+  .my_work_section .back a{
+    padding: 8px 20px;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .my_work_section_center{
+    width: 320px;
+  }
+  .my_work_section_center .item{
+    width: 100%;
+    height: 260px;
+
+  }
+
+.item .text__in p{
+    font-size: 2.7rem;
+    top: 14px;
+    transform: translate(-50%,0);
+  }
+
+  .my_work_section .back a{
+    left: 6px;
+  }
+}
